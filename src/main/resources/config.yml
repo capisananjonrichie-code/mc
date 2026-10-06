@@ -1,0 +1,49 @@
+# MTREEPlayerIdentity  (colors: & codes)
+
+nametag:
+  enabled: true
+  use-luckperms: true
+  show-rank: true       # false = colour/name only, no prefix/suffix above heads
+  show-health: false    # vanilla hearts number under the name
+
+tab:
+  enabled: true
+  # placeholders: {prefix} {name-color} {name} {suffix} {rank}
+  format: "{prefix}{name-color}{name}{suffix}"
+
+# Rank used when LuckPerms is missing or the player's group is not listed below.
+default-rank: member
+
+# Add more ranks freely. The key must match the LuckPerms group name,
+# or set "luckperms-group" to map a different group name onto it.
+ranks:
+  owner:
+    prefix: "&6[OWNER] "
+    name-color: "&f"
+    suffix: ""
+  member:
+    prefix: "&7[MEMBER] "
+    name-color: "&f"
+    suffix: ""
+  # admin:
+  #   luckperms-group: "staff"
+  #   prefix: "&6[ADMIN] "
+  #   name-color: "&f"
+  #   suffix: ""
+  #   tab: "{prefix}{name-color}{name}"   # optional per-rank TAB format
+
+intro:
+  enabled: true
+  start-delay-ticks: 30      # wait a moment after joining (lets MOTD/Essentials messages pass)
+  duration-seconds: 6.5      # total length (~5-7 s)
+  sound: true
+  title: "&6MTREE"
+  subtitle: "&7A SURVIVAL SMP"
+  message: "&fYour story begins here."
+  player-message: "&7Welcome, &f%player%&7."
+
+# Essentials already sends a join message. Keep this OFF unless you also silence Essentials' one
+# (set it to "none" in Essentials' config). When ON, it replaces the vanilla/Essentials text -> no duplicates.
+join-message:
+  enabled: false
+  message: "&8[&6+&8] &f%player% &7joined MTREE."

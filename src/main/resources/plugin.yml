@@ -1,0 +1,15 @@
+name: MTREEPlayerIdentity
+version: '${project.version}'
+main: dev.mtree.identity.IdentityPlugin
+api-version: '1.21'
+description: Nametags, ranks, tab list, join message and welcome intro for MTREE.
+authors: [MTREE]
+softdepend: [LuckPerms]
+commands:
+  mtree:
+    description: MTREE identity commands
+    usage: /mtree <reload|nametag|intro|preview>
+permissions:
+  mtree.admin:
+    description: Use /mtree commands
+    default: op
